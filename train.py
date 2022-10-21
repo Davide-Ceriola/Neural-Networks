@@ -152,11 +152,11 @@ for counter in range (hyperparameters.K_FOLD):
 
 
     if loss_name == "cross_entropy":
-    	loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
+      loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
     elif loss_name == "focal":
-    	loss = SparseCategoricalFocalLoss(gamma=hyperparameters.GAMMA)
+      loss = SparseCategoricalFocalLoss(gamma=hyperparameters.GAMMA)
     else:
-    	raise ValueError('Loss name not valid!')
+      raise ValueError('Loss name not valid!')
 
 
     
