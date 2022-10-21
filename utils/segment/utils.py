@@ -103,19 +103,19 @@ def trim_wave(data, segment_length=48000, segment_mode=1):
         return data
 
     if segment_mode == 0:
-    	trim_size = data.shape[0] % segment_length
-    	pre = int(np.floor(trim_size/2))
-    	pos = int(-np.floor(-trim_size/2))
-	
-    	trimed_data = data[pre:-pos]
-    	return trimed_data
+      trim_size = data.shape[0] % segment_length
+      pre = int(np.floor(trim_size/2))
+      pos = int(-np.floor(-trim_size/2))
+
+      trimed_data = data[pre:-pos]
+      return trimed_data
     elif segment_mode == 1:
-    	trim_size = data.shape[0] - segment_length
-    	pre = int(np.floor(trim_size/2))
-    	pos = int(-np.floor(-trim_size/2))
-	
-    	trimed_data = data[pre:-pos]
-    	return trimed_data
+      trim_size = data.shape[0] - segment_length
+      pre = int(np.floor(trim_size/2))
+      pos = int(-np.floor(-trim_size/2))
+
+      trimed_data = data[pre:-pos]
+      return trimed_data
     else:
     	raise Exception("Sorry, segment_mode must 0 or 1")
 

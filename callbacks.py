@@ -22,7 +22,7 @@ class BestModelWeights(tf.keras.callbacks.Callback):
         self.metric = metric
         self.metric_type = metric_type
         if self.metric_type not in ["min", "max"]:
-        	  raise NameError('metric_type must be min or max')
+            raise NameError('metric_type must be min or max')
 
     def on_train_begin(self, logs=None):
         if self.metric_type == "min":
@@ -68,14 +68,14 @@ class ShowProgress(tf.keras.callbacks.Callback):
 
 
 def LearningRateScheduler():
-	def scheduler(epoch, lr):
-	    if epoch < hyperparameters.LEARNING_RATE_DECAY_STRATPOINT:
-	        return lr
-	    else:
-	        if epoch % hyperparameters.LEARNING_RATE_DECAY_STEP == 0:
-	            lr = lr * tf.math.exp(hyperparameters.LEARNING_RATE_DECAY_PARAMETERS)
-	    return lr
-	return tf.keras.callbacks.LearningRateScheduler(scheduler)
+  def scheduler(epoch, lr):
+      if epoch < hyperparameters.LEARNING_RATE_DECAY_STRATPOINT:
+          return lr
+      else:
+          if epoch % hyperparameters.LEARNING_RATE_DECAY_STEP == 0:
+              lr = lr * tf.math.exp(hyperparameters.LEARNING_RATE_DECAY_PARAMETERS)
+      return lr
+  return tf.keras.callbacks.LearningRateScheduler(scheduler)
 
 
 
