@@ -1,5 +1,4 @@
-# This is a re-implementation for a NN project 
-# Light-SERNet
+# This is a re-implementation of Light-SERNet for a NN project 
 
 This is the Tensorflow 2.x implementation of our paper ["Light-SERNet: A lightweight fully convolutional neural network for speech emotion recognition"](https://arxiv.org/abs/2110.03435), accepted in ICASSP 2022. 
 
@@ -99,7 +98,7 @@ python train.py -dn "EMO-DB" \
 
 ## Citation
 
-If you find our code useful for your research, please consider citing:
+The reference paper citation:
 ```bibtex
 @inproceedings{aftab2022light,
   title={Light-SERNet: A lightweight fully convolutional neural network for speech emotion recognition},
